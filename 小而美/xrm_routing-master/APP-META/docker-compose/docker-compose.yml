@@ -1,0 +1,29 @@
+version: '3'
+services:
+  xrm-routing:
+    # 注意替换镜像地址，CI 构建出来的docker镜像地址
+    image: {{image_url}}
+    restart: always
+    hostname: xrm-routing
+    container_name: xrm-routing
+    ports:
+      - '8000:8000'
+    environment:
+      TZ: "Asia/Shanghai"
+      LANG: "en_US.UTF-8"
+      IS_COMPOSE: "true"
+      # "development"|"production"
+      ENV_TYPE: {{env_type}}
+      http.cors.enabled: "true"
+      http.cors.allow-origin: "*"
+      http.cors.allow-methods: "*"
+      http.cors.allow-headers: "X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization"
+      http.cors.allow-credentials: "true"
+    networks:
+      - xrm-routing
+    volumes:
+      - '/appruntime/python/xrm-routing/logs:/appruntime/python/xrm-routing/logs'
+networks:
+  xrm-routing:
+
+

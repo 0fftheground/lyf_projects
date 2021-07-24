@@ -1,0 +1,9 @@
+################################
+##### 单应用只用这一节即可
+- appname: xrm-routing      # 自己的应用名
+  # 语言类型 必填
+  language: python
+  build:
+    image: harbor-k8s.xsyxsc.cn/appbuild/python:3.6.8  # 用于构建的image
+    archive: .
+    app_bin: flask_app.py
