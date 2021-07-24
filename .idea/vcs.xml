@@ -2,5 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/小而美/routing" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/小而美/xrm_routing" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/小而美/xrm_test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/物流分拣rating/ÎïÁ÷·Ö¼ðrating" vcs="Git" />
   </component>
 </project>
